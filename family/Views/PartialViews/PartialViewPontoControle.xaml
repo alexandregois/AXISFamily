@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="family.Views.PartialViews.PartialViewPontoControle"
+    xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+	BackgroundColor="{Binding PageBackgroundColor}">
+    <ContentView.Content>
+        <StackLayout
+			Spacing="0"
+			Margin="0"
+			WidthRequest="{Binding DefaultWidth}"
+			HeightRequest="{Binding ContentLoadBoxHeight}">
+
+            <ListView 
+				x:Name="ListPontosControle" 
+				SeparatorVisibility="Default" 
+				Margin="0"
+				VerticalOptions="CenterAndExpand" 
+				HorizontalOptions="FillAndExpand"
+				ItemSelected="ListPontosControleItemSelected"
+				IsEnabled="{Binding ListPontosControleIsEnabled}"
+				IsRefreshing="{Binding ListPontosControleIsRefreshing}"
+				ItemsSource="{Binding ListPontosControleItemsSource}"
+				RefreshCommand="{Binding ListPontosControleRefreshCommand}"
+				HeightRequest="{Binding ListPontosControleHeight}"
+				WidthRequest="{Binding DefaultWidth}"
+				BackgroundColor="Transparent"
+			></ListView>
+
+            <Button 
+				x:Name="BtnAdicionarPontoControle"
+				TextColor="White" 
+				BorderColor="Transparent"
+				BorderWidth="0"
+				BorderRadius="0"
+				HeightRequest="{Binding PanelSearchHeight}" 
+				BackgroundColor="{Binding PanelSearchBackgroundColor}" 
+				WidthRequest="{Binding DefaultWidth}"
+				IsEnabled="{Binding ListPontosControleIsEnabled}"
+				Text="{Binding BtnAdicionarPontoControleText}"
+				IsVisible="{Binding ListPontosControleIsVisible}"
+				Command="{Binding BtnAdicionarPontoControleCommand}"
+			></Button>
+
+            <ScrollView
+				x:Name="Panel" 
+				Margin="0"
+				IsVisible="{Binding MaintainIsVisible}"
+				HeightRequest="{Binding ContentLoadBoxHeight}"
+				WidthRequest="{Binding DefaultWidth}">
+
+                <StackLayout
+					Spacing="0"
+					Margin="0">
+
+                    <StackLayout 
+						x:Name="PanelLabel"
+						Spacing="0"
+						Margin="{Binding PanelLabelMargin}"
+						VerticalOptions="CenterAndExpand" 
+						HorizontalOptions="FillAndExpand"
+                        IsVisible="{Binding PanelLabelIsVisible}"
+					>
+                        <Entry 
+							x:Name="TxtNome"
+							BackgroundColor="White" 
+							Margin="{Binding LineMargin}"
+							Placeholder="{Binding TxtNomePlaceholder}"
+							HeightRequest="{Binding PanelLabelHeight}"
+							Text="{Binding TxtNomeText}"
+						></Entry>
+
+                        <StackLayout 
+							x:Name="EnderecoBox"
+							Spacing="0" 
+							Margin="{Binding LineMargin}"
+							HorizontalOptions="Center" 
+							VerticalOptions="Center" 
+							Orientation="Horizontal" 
+							HeightRequest="{Binding PanelLabelHeight}"
+						>
+                            <Entry 
+								BackgroundColor="White" 
+								x:Name="TxtEndereco" 
+								Placeholder="{Binding TxtEnderecoPlaceholder}"
+								Text="{Binding TxtEnderecoText}"
+								HeightRequest="{Binding PanelLabelHeight}"
+								WidthRequest="{Binding TxtEnderecoWidth}"
+							></Entry>
+
+                            <Button 
+								x:Name="BtnBuscarEndereco"
+								Image="ic_busca.png"
+								BorderColor="Transparent"
+								BorderWidth="0"
+								BorderRadius="0"
+								Command="{Binding BtnBuscarEnderecoCommand}"
+								WidthRequest="{Binding BtnBuscarEnderecoWidth}"
+								BackgroundColor="{Binding PanelSearchBackgroundColor}"
+							></Button>
+
+                        </StackLayout>
+
+                        <StackLayout
+							Margin="{Binding LineMargin}"
+							Spacing="0"
+							Orientation="Horizontal"
+						>
+                            <Label 
+								x:Name="LabelRaio"
+								FontSize="17"
+								TextColor="White" 
+								Margin="0,0,5,0"
+								Text="{Binding LabelRaioText}"
+								HeightRequest="25"
+								VerticalTextAlignment="End"
+							></Label>
+
+                            <Label 
+								x:Name="LabelMetros"
+								FontSize="17"
+								TextColor="White" 
+								Margin="0,0,0,0"
+								Text="{Binding LabelMetrosText}"
+								HeightRequest="25"
+								VerticalTextAlignment="End"
+							></Label>
+                        </StackLayout>
+
+                        <StackLayout 
+							x:Name="RaioAncoraBox"
+							Margin="0"
+							Spacing="0"
+						></StackLayout>
+
+                        <StackLayout HeightRequest="41" HorizontalOptions="StartAndExpand" VerticalOptions="Center" 
+                                 Orientation="Horizontal" Margin="-5,0,0,0">
+                            <Image Source="ic_calendar.png" HeightRequest="40" Margin="0,0,0,0"></Image>
+                            <Label x:Name="labelCalendar" TextColor="White" Margin="0,9,0,0"></Label>
+                            <Label x:Name="labelCalendarConfigurar" TextColor="White" Margin="45,9,0,0"></Label>
+                        </StackLayout>
+
+                    </StackLayout>
+
+                    <StackLayout 
+						x:Name="PanelBotoesNovoPonto" 
+						Orientation="Horizontal" 
+						Margin="-1"
+						Spacing="0"
+						HeightRequest="{Binding PanelSearchHeight}" 
+						WidthRequest="{Binding DefaultWidth}"
+						IsVisible="{Binding PanelBotoesNovoPontoIsVisible}"
+					>
+                        <Button 
+							x:Name="BtnSalvar"
+							TextColor="White"
+							BorderColor="Transparent"
+							BorderWidth="0"
+							BorderRadius="0"
+							Margin="0"
+							HeightRequest="{Binding PanelSearchHeight}" 
+							BackgroundColor="{Binding PanelSearchBackgroundColor}" 
+							WidthRequest="{Binding PanelBotoesNovoPontoWidth}"
+							IsEnabled="{Binding MaintainIsEnabled}"
+							Text="{Binding BtnSalvarText}"
+							IsVisible="{Binding MaintainIsVisible}"
+							Command="{Binding BtnSalvarCommand}"
+						></Button>
+                        <Button 
+							x:Name="BtnCancelar"
+							TextColor="White"
+							BorderColor="Transparent"
+							BorderWidth="0"
+							BorderRadius="0"
+							Margin="1,0,0,0"
+							HeightRequest="{Binding PanelSearchHeight}" 
+							BackgroundColor="{Binding PanelSearchBackgroundColor}" 
+							WidthRequest="{Binding PanelBotoesNovoPontoWidth}"
+							IsEnabled="{Binding MaintainIsEnabled}"
+							Text="{Binding BtnCancelarText}"
+							IsVisible="{Binding MaintainIsVisible}"
+							Command="{Binding BtnCancelarCommand}"
+						></Button>
+                    </StackLayout>
+
+                    <StackLayout 
+						x:Name="PanelCalendar" 
+						Orientation="Vertical" 
+						Margin="13,0,0,0"
+						Spacing="0"
+						HeightRequest="{Binding ContentLoadBoxHeight}" 
+						WidthRequest="{Binding DefaultWidth}"
+						IsVisible="{Binding PanelCalendarIsVisible}" 
+					>
+                        <StackLayout HeightRequest="43" HorizontalOptions="StartAndExpand" VerticalOptions="Center" 
+                                 Orientation="Horizontal" Margin="-7,0,0,0">
+                            <Image Source="ic_calendar.png" HeightRequest="40" Margin="-1,0,0,0"></Image>
+                            <Label x:Name="labelPainelCalendar" TextColor="White" Margin="0,9,0,0"></Label>
+                            <Label x:Name="labelFechar" TextColor="White" Margin="45,9,0,0"></Label>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical" Margin="0,13,0,0" HorizontalOptions="StartAndExpand" >
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="{Binding ImageCheckedSource}" x:Name="ImageCheck" HeightRequest="29" WidthRequest="29"></Image>
+                                <Label Text="Avisar se não estiver no" TextColor="White" Margin="5,-5,0,0"></Label>
+                            </StackLayout>                            
+                            <Label Text="ponto no horário." TextColor="White" Margin="39,-17,0,0"></Label>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" Margin="0,15,0,0">
+                            <Button x:Name="btnSegunda" WidthRequest="43" HeightRequest="43" BackgroundColor="{Binding SegundaFundoColor}" Text="S" Command="{Binding ClickSegundaCommand}"></Button>
+                            <Button x:Name="btnTerca" WidthRequest="43" HeightRequest="43" BackgroundColor="{Binding TercaFundoColor}" Text="T" Command="{Binding ClickTercaCommand}"></Button>
+                            <Button x:Name="btnQuarta" WidthRequest="43" HeightRequest="43" BackgroundColor="{Binding QuartaFundoColor}" Text="Q" Command="{Binding ClickQuartaCommand}"></Button>
+                            <Button x:Name="btnQuinta" WidthRequest="43" HeightRequest="43" BackgroundColor="{Binding QuintaFundoColor}" Text="Q" Command="{Binding ClickQuintaCommand}"></Button>
+                            <Button x:Name="btnSexta" WidthRequest="43" HeightRequest="43" BackgroundColor="{Binding SextaFundoColor}" Text="S" Command="{Binding ClickSextaCommand}"></Button>
+                            <Button x:Name="btnSabado" WidthRequest="43" HeightRequest="43" BackgroundColor="{Binding SabadoFundoColor}" Text="S" Command="{Binding ClickSabadoCommand}"></Button>
+                            <Button x:Name="btnDomingo" WidthRequest="43" HeightRequest="43" BackgroundColor="{Binding DomingoFundoColor}" Text="D" Command="{Binding ClickDomingoCommand}"></Button>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" Margin="0,15,0,0" HorizontalOptions="StartAndExpand">
+                            <TimePicker x:Name="txtHoraInicial" BackgroundColor="White" TextColor="Black" Time="{Binding TextoHoraInicial}"></TimePicker>
+                            <!--<Entry x:Name="txtHoraInicial" TextColor="Black" Text="{Binding TextoHoraInicial}" BackgroundColor="White" HorizontalTextAlignment="Center" HeightRequest="47" WidthRequest="89" Placeholder="00:00" IsEnabled="True"></Entry>-->
+                            <Label Text="até" Margin="5,9,5,0" TextColor="White"></Label>
+                            <TimePicker x:Name="txtHoraFinal" BackgroundColor="White" TextColor="Black" Time="{Binding TextoHoraFinal}"></TimePicker>
+                            <!--<Entry x:Name="txtHoraFinal" TextColor="Black" Text="{Binding TextoHoraFinal}" BackgroundColor="White" HorizontalTextAlignment="Center" HeightRequest="47" WidthRequest="89" Placeholder="00:00" IsEnabled="True"></Entry>-->
+                        </StackLayout>
+
+
+                    </StackLayout>
+
+
+                </StackLayout>
+
+            </ScrollView>
+
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

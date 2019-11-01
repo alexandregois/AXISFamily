@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "884889600255",
+    "firebase_url": "https://alltech-family.firebaseio.com",
+    "project_id": "alltech-family",
+    "storage_bucket": "alltech-family.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:884889600255:android:1ed19d451e00b42a",
+        "android_client_info": {
+          "package_name": "br.com.alltechseguranca.family"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "884889600255-vuntftn46gkbgruuh9doetal5s2la2q4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADexxvZcdBO9TngFdxBPxrwuaJQ3iRtHs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "884889600255-vuntftn46gkbgruuh9doetal5s2la2q4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

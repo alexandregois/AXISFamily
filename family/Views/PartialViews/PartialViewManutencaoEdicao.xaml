@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="family.Views.PartialViews.PartialViewManutencaoEdicao"
+	BackgroundColor="{Binding PageBackgroundColor}">
+    <ContentView.Content>
+        <ScrollView
+			Margin="0"
+			WidthRequest="{Binding DefaultWidth}"
+			HeightRequest="{Binding ContentLoadBoxHeight}"
+            BackgroundColor="#2f7dc1">
+
+            <StackLayout Spacing="0" Orientation="Vertical" 
+					Margin="0">
+                <StackLayout x:Name="PainelDados" IsVisible="True">
+                    <StackLayout Orientation="Vertical" 
+					BackgroundColor="#2f7dc1"
+					Margin="15,10,15,15" 
+					Spacing="0"
+                    HeightRequest="83"
+                    VerticalOptions="CenterAndExpand">
+
+                        <StackLayout Orientation="Horizontal" Margin="0,5">
+                            <Label x:Name="lblTrocaOleoTitulo" Text="Próxima Troca de Óleo: " FontSize="13" TextColor="White"></Label>
+                            <Label x:Name="lblTrocaOleoValue" Text="{Binding TrocaOleo}" FontSize="13" TextColor="White"></Label>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" Margin="0,5">
+                            <Label x:Name="lblProximaRevisaoTitulo" Text="Próxima Revisão: " FontSize="13" TextColor="White"></Label>
+                            <Label x:Name="lblProximaRevisaoValue" Text="{Binding ProximaRevisao}" FontSize="13" TextColor="White"></Label>
+                        </StackLayout>
+
+
+                        <StackLayout Orientation="Horizontal" Margin="0,5">
+                            <Label x:Name="lblPneusTitulo" Text="Rodízio de Pneu: " FontSize="13" TextColor="White"></Label>
+                            <Label x:Name="lblPneusTituloValue" Text="{Binding RodizioPneu}" FontSize="13" TextColor="White"></Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="0,5">
+                            <Label x:Name="lblSeguroTitulo" Text="Seguro: " FontSize="13" TextColor="White"></Label>
+                            <Label x:Name="lblSeguroTituloValue" Text="{Binding SeguroData}" FontSize="13" TextColor="White"></Label>
+                        </StackLayout>
+
+
+                    </StackLayout>
+                    <StackLayout>
+                        <Button 
+							x:Name="BtnEditar"
+							TextColor="White"
+							BorderColor="Transparent"
+							BorderWidth="0"
+							BorderRadius="0"
+							Margin="0, 65, 0, 0"
+							BackgroundColor="#005190" 
+                        WidthRequest="{Binding DefaultWidth}"
+                        HeightRequest="53"
+                        Text="{Binding BtnEditarManutencaoText}"
+				IsVisible="{Binding BtnEditarManutencaoIsVisible}"
+				Command="{Binding BtnEditarManutencaoCommand}"></Button>
+                    </StackLayout>
+                </StackLayout>
+
+            </StackLayout>
+
+        </ScrollView>
+    </ContentView.Content>
+</ContentView>

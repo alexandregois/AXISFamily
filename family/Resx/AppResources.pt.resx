@@ -1,0 +1,552 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="HttpRequestException" xml:space="preserve">
+    <value>A001 - Não foi possível conectar com o servidor. Por favor, verifique a sua conexão e tente novamente.</value>
+  </data>
+  <data name="Exception" xml:space="preserve">
+    <value>A002 - Ocorreu um erro inesperado. Tente novamente por favor. Caso o erro persista, entre em contato com o suporte técnico</value>
+  </data>
+  <data name="UnEpectedError" xml:space="preserve">
+    <value>S001 - Ocorreu um erro inesperado. Tente novamente por favor. Caso o erro persista, entre em contato com o suporte técnico</value>
+  </data>
+  <data name="BadRequest" xml:space="preserve">
+    <value>S002 - Erro na requisição. Tente novamente por favor. Caso o erro persista, deslogue e logue.</value>
+  </data>
+  <data name="Forbidden" xml:space="preserve">
+    <value>S003 - Usuário sem permissão</value>
+  </data>
+  <data name="SenhaInvalida" xml:space="preserve">
+    <value>S104 - Senha inválida.</value>
+  </data>
+  <data name="UsuarioNaoEncontrado" xml:space="preserve">
+    <value>S105 - Senha inválida.</value>
+  </data>
+  <data name="TrackLimitReached" xml:space="preserve">
+    <value>A103 - Você está sendo rastreado por dois dispositivos não é possivel a inclusão de mais um.</value>
+  </data>
+  <data name="RastrearDispositivoSucesso" xml:space="preserve">
+    <value>Dispositivo cadastrado/reativado com sucesso!</value>
+  </data>
+  <data name="LoginSenhaInvalido" xml:space="preserve">
+    <value>A104 - Usuário ou senha inválido</value>
+  </data>
+  <data name="pontocontrole_sucessocadastro" xml:space="preserve">
+    <value>Ponto de controle cadastrado com sucesso!</value>
+  </data>
+  <data name="pontocontrole_errocadastro" xml:space="preserve">
+    <value>S101 - Ponto de controle não pode ser cadastrado!</value>
+  </data>
+  <data name="pontocontrole_sucessoalteracao" xml:space="preserve">
+    <value>Ponto de controle alterado com sucesso!</value>
+  </data>
+    <data name="CompraRealizada" xml:space="preserve">
+    <value> Serviço comprado. </value>
+  </data>
+    <data name="ServicoPago" xml:space="preserve">
+    <value> Usuário já possui o serviço pago. </value>
+  </data>
+  <data name="pontocontrole_erroalteracao" xml:space="preserve">
+    <value>S103 - Ponto de controle não pode ser alterado!</value>
+  </data>
+  <data name="pontocontrole_sucessoexcluido" xml:space="preserve">
+    <value>Ponto de controle excluído com sucesso!</value>
+  </data>
+  <data name="pontocontrole_erroexcluido" xml:space="preserve">
+    <value>S105 - Ponto de controle não pode ser excluído!</value>
+  </data>
+  <data name="PositionNotFound" xml:space="preserve">
+    <value>S101 - Posição não localizada!</value>
+  </data>
+  <data name="latitudelongitudenaoencontrados" xml:space="preserve">
+    <value>Erro na requisição. Tente novamente por favor.</value>
+  </data>
+  <data name="ancora_criacaoerro" xml:space="preserve">
+    <value>Âncora não pode ser criada!</value>
+  </data>
+  <data name="ancora_desativacaoerro" xml:space="preserve">
+    <value>Âncora não pode ser desativada!</value>
+  </data>
+  <data name="invalidlogin" xml:space="preserve">
+    <value>Email inválido.</value>
+  </data>
+  <data name="emailalreadyregistered" xml:space="preserve">
+    <value>E-mail já cadastrado. Faça contato com a sua Central</value>
+  </data>
+  <data name="nocallcenteravailable" xml:space="preserve">
+    <value>Nenhuma Central encontrada!</value>
+  </data>
+  <data name="CadastrarUsuarioSucesso" xml:space="preserve">
+    <value>Cadastro realizado com sucesso! Verifique o seu e-mail para ativar sua conta.</value>
+  </data>
+  <data name="ComandoEnviado" xml:space="preserve">
+    <value>Comando na fila para envio!</value>
+  </data>
+  <data name="AncoraCriadaSucesso" xml:space="preserve">
+    <value>Âncora criada com sucesso!</value>
+  </data>
+  <data name="AncoraDesativada" xml:space="preserve">
+    <value>Âncora desativada com sucesso!</value>
+  </data>
+  <data name="UseEmailPass" xml:space="preserve">
+    <value>Utilize seu e-mail e senha</value>
+  </data>
+  <data name="Registered" xml:space="preserve">
+    <value>Não é cadastrado? Cadastre-se!</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Erro</value>
+  </data>
+  <data name="AddressNotFound" xml:space="preserve">
+    <value>Endereço não localizado!</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Endereço</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Sucesso</value>
+  </data>
+  <data name="AppWithChip" xml:space="preserve">
+    <value>Você só pode acessar o aplicativo com um aparelho com chip.</value>
+  </data>
+  <data name="Alert" xml:space="preserve">
+    <value>Alerta</value>
+  </data>
+  <data name="EmailPlease" xml:space="preserve">
+    <value>Favor digitar o e-mail</value>
+  </data>
+  <data name="PassworPlease" xml:space="preserve">
+    <value>Favor digitar a senha</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Selecione</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>Deslogar</value>
+  </data>
+  <data name="Purchase" xml:space="preserve">
+    <value>Contratar</value>
+  </data>
+  <data name="Configuration" xml:space="preserve">
+    <value>Configuração</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="TrackDevice" xml:space="preserve">
+    <value>Rastrear dispositivo</value>
+  </data>
+  <data name="TrackDeviceAdmin" xml:space="preserve">
+    <value>Lhe enviaremos um email para ativar o rastreamento</value>
+  </data>
+  <data name="TrackDeviceNotAdmin" xml:space="preserve">
+    <value>Enviaremos um email para o administrador da conta ativar o dispositivo</value>
+  </data>
+  <data name="TrackDeviceEndText" xml:space="preserve">
+    <value>, deseja continuar?</value>
+  </data>
+  <data name="PanicAlert" xml:space="preserve">
+    <value>Alerta de pânico</value>
+  </data>
+  <data name="PanicAlertSendExplanation" xml:space="preserve">
+    <value>Clique no botão abaixo e sua central receberá um alerta de Pânico. Permaneça com seu aparelho em mãos, você será procurado pela Central para a prestação de socorro.</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="CurrentLocation" xml:space="preserve">
+    <value>Localização atual</value>
+  </data>
+  <data name="Historic" xml:space="preserve">
+    <value>Histórico</value>
+  </data>
+  <data name="Checkpoint" xml:space="preserve">
+    <value>Ponto de Controle</value>
+  </data>
+  <data name="Anchor" xml:space="preserve">
+    <value>Âncora</value>
+  </data>
+  <data name="Block" xml:space="preserve">
+    <value>Bloqueio</value>
+  </data>
+  <data name="Blocked" xml:space="preserve">
+    <value>Bloqueado</value>
+  </data>
+  <data name="Unlocked" xml:space="preserve">
+    <value>Desbloqueado</value>
+  </data>
+  <data name="GettingAddress" xml:space="preserve">
+    <value>Obtendo endereço ...</value>
+  </data>
+  <data name="Enable" xml:space="preserve">
+    <value>Ativar</value>
+  </data>
+  <data name="Disable" xml:space="preserve">
+    <value>Desativar</value>
+  </data>
+  <data name="Radius" xml:space="preserve">
+    <value>Raio:</value>
+  </data>
+  <data name="Meters" xml:space="preserve">
+    <value>metros</value>
+  </data>
+  <data name="AnchorCreated" xml:space="preserve">
+    <value>Âncora criada com sucesso!</value>
+  </data>
+  <data name="AnchorDisabled" xml:space="preserve">
+    <value>Âncora desativada com sucesso!</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Detalhes</value>
+  </data>
+  <data name="LoadMorePositions" xml:space="preserve">
+    <value>Carregar mais posições</value>
+  </data>
+  <data name="Speed" xml:space="preserve">
+    <value>Velocidade</value>
+  </data>
+  <data name="DatePosition" xml:space="preserve">
+    <value>Data posição</value>
+  </data>
+  <data name="DateUpdate" xml:space="preserve">
+    <value>Data atualização</value>
+  </data>
+  <data name="Event" xml:space="preserve">
+    <value>Evento</value>
+  </data>
+  <data name="Ignition" xml:space="preserve">
+    <value>Ignição</value>
+  </data>
+  <data name="On" xml:space="preserve">
+    <value>Ligada</value>
+  </data>
+  <data name="Off" xml:space="preserve">
+    <value>Desligada</value>
+  </data>
+  <data name="Valid" xml:space="preserve">
+    <value>Válido</value>
+  </data>
+  <data name="Invalid" xml:space="preserve">
+    <value>Inválido</value>
+  </data>
+  <data name="GprsSignal" xml:space="preserve">
+    <value>Nível de sinal GPRS</value>
+  </data>
+  <data name="Odometer" xml:space="preserve">
+    <value>Odômetro</value>
+  </data>
+  <data name="Battery" xml:space="preserve">
+    <value>Bateria</value>
+  </data>
+  <data name="BlockPassword" xml:space="preserve">
+    <value>Para confirmar, informe a sua senha.</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Senha</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Wait" xml:space="preserve">
+    <value>Aguarde...</value>
+  </data>
+  <data name="Unlock" xml:space="preserve">
+    <value>Desbloquear</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Sim</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Não</value>
+  </data>
+  <data name="BlockAlert" xml:space="preserve">
+    <value>Você poderá gerar acidente com risco de morte acionando o bloqueio do veículo, caso o mesmo esteja em movimento.</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Excluir</value>
+  </data>
+  <data name="Exclusion" xml:space="preserve">
+    <value>Exclusão</value>
+  </data>
+  <data name="ConfirmExclusionCheckPoint" xml:space="preserve">
+    <value>Deseja excluir o ponto de controle?</value>
+  </data>
+  <data name="AddCheckPoint" xml:space="preserve">
+    <value>Adicionar ponto de controle</value>
+  </data>
+  <data name="Salve" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="ErrorNameEmpty" xml:space="preserve">
+    <value>Preencha o campo nome.</value>
+  </data>
+  <data name="ErrorCepEmpty" xml:space="preserve">
+    <value>Preencha o campo de cep.</value>
+  </data>
+  <data name="ErrorCepInvalid" xml:space="preserve">
+    <value>O CEP deve ter 8 digitos.</value>
+  </data>
+  <data name="ErrorTelefoneEmpty" xml:space="preserve">
+    <value>Preencha o campo de telefone.</value>
+  </data>
+  <data name="ErrorEmailEmpty" xml:space="preserve">
+    <value>Preencha o campo e-mail.</value>
+  </data>
+  <data name="ErrorEmailInvalid" xml:space="preserve">
+    <value>Email Inválido!</value>
+  </data>
+  <data name="ErrorPasswordsEmpty" xml:space="preserve">
+    <value>Preencha os campos de senha.</value>
+  </data>
+  <data name="PasswordsNotMatch" xml:space="preserve">
+    <value>As senhas não coincidem.</value>
+  </data>
+  <data name="ErrorAddressEmpty" xml:space="preserve">
+    <value>Preencha o campo endereço.</value>
+  </data>
+  <data name="PanicSend" xml:space="preserve">
+    <value>Pânico enviado.</value>
+  </data>
+  <data name="Unauthorized" xml:space="preserve">
+    <value>Acesso não autorizado.</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Data:</value>
+  </data>
+  <data name="Maintenance" xml:space="preserve">
+    <value>Manutenção</value>
+  </data>
+  <data name="ProximaRevisao" xml:space="preserve">
+    <value>Próxima Revisão</value>
+  </data>
+  <data name="ProximaTrocaOleo" xml:space="preserve">
+    <value>Próxima Troca de Óleo</value>
+  </data>
+  <data name="RodizioPneu" xml:space="preserve">
+    <value>Rodízio de Pneu</value>
+  </data>
+  <data name="Seguro" xml:space="preserve">
+    <value>Seguro</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="SomenteNumero" xml:space="preserve">
+    <value>Only Number</value>
+  </data>
+  <data name="MaintenanceSave" xml:space="preserve">
+    <value>Manutenção cadastrada com sucesso!</value>
+  </data>
+  <data name="CancelarComando" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="CancelarComandoSucesso" xml:space="preserve">
+    <value>Cancelamento de comando enviado com sucesso.</value>
+  </data>
+  <data name="ErroSuporte" xml:space="preserve">
+    <value>Erro inesperado. Tente novamente ou entre em contato com o suporte técnico.</value>
+  </data>
+  <data name="Charging" xml:space="preserve">
+    <value>Carregando</value>
+  </data>
+  <data name="Discharging" xml:space="preserve">
+    <value>Descarregando</value>
+  </data>
+  <data name="Full" xml:space="preserve">
+    <value>Cheia</value>
+  </data>
+  <data name="NotCharging" xml:space="preserve">
+    <value>Não está carregando</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Desconhecido</value>
+  </data>
+  <data name="ClienteBloqueado" xml:space="preserve">
+    <value>Problemas com acesso. Contate o suporte</value>
+  </data>
+  <data name="ClienteDesativado" xml:space="preserve">
+    <value>Acesso negado</value>
+  </data>
+  <data name="Configurar" xml:space="preserve">
+    <value>Configurar</value>
+  </data>
+  <data name="DayTime" xml:space="preserve">
+    <value>Dia e horário</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Fechar</value>
+  </data>
+  <data name="HoraFinalInvalida" xml:space="preserve">
+    <value>Hora final inválida ou não preenchida.</value>
+  </data>
+  <data name="HoraInicialInvalida" xml:space="preserve">
+    <value>Hora inicial inválida ou não preenchida.</value>
+  </data>
+  <data name="HoraInicialIgualMaior" xml:space="preserve">
+    <value>Hora inicial igual ou maior que a hora final.</value>
+  </data>
+  <data name="SelecioneDiaSemana" xml:space="preserve">
+    <value>Favor selecionar um dia da semana.</value>
+  </data>
+  <data name="HoraInicialFinalInvalida" xml:space="preserve">
+    <value>Hora inválida ou não preenchida.</value>
+  </data>
+  <data name="ExibeStreetView" xml:space="preserve">
+    <value>Exibe StreetView</value>
+  </data>
+  <data name="StreetView" xml:space="preserve">
+    <value>Street View</value>
+  </data>
+  <data name="Gps" xml:space="preserve">
+    <value>Localização inválida. Verifique o GPS.</value>
+  </data>
+  <data name="GpsOpenSettings" xml:space="preserve">
+    <value>Ativar Gps.</value>
+  </data>
+  <data name="GpsSettings" xml:space="preserve">
+    <value>Para que o aplicativo funcione corretamente, o serviço de localização do dispositivo precisa estar ligado. Cancelar essa operação poderá causar erros inesperados.</value>
+  </data>
+  <data name="Hibrido" xml:space="preserve">
+    <value>Híbrido</value>
+  </data>
+  <data name="Mapa" xml:space="preserve">
+    <value>Opções do mapa</value>
+  </data>
+  <data name="Satelite" xml:space="preserve">
+    <value>Satélite</value>
+  </data>
+  <data name="Terreno" xml:space="preserve">
+    <value>Terreno</value>
+  </data>
+  <data name="Trafego" xml:space="preserve">
+    <value>Tráfego</value>
+  </data>
+  <data name="MapaPadrao" xml:space="preserve">
+    <value>Padrão</value>
+  </data>
+  <data name="Telefone" xml:space="preserve">
+    <value>Telefones</value>
+  </data>
+</root>

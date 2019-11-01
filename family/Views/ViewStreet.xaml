@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="family.Views.ViewStreet"
+             NavigationPage.BackButtonTitle="Back"
+             NavigationPage.HasNavigationBar="True"
+             NavigationPage.HasBackButton ="True"
+             BackgroundColor="White">  
+            <StackLayout
+                Margin="0"
+				        Padding="0"
+				        Spacing="0"
+				        Orientation="Vertical"
+                BackgroundColor="White"
+                >
+        <WebView 
+					        x:Name="WVStreet"					        
+					        IsVisible="{Binding ExibeStreetView}"
+                            HeightRequest="{Binding HeightStreetView}"
+					        WidthRequest="{Binding WidthStreetView}" 
+                  />
+            </StackLayout>
+</ContentPage>

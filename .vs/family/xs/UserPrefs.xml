@@ -1,0 +1,55 @@
+﻿<Properties StartupConfiguration="{23C5F214-849B-470E-90F8-5A1529272971}|Default">
+  <MonoDevelop.Ide.ItemProperties.family.Droid_220-_220Khronos2 PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.ItemProperties.family.iOS automaticSigning="True" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.73f1fb7f6a18f97946eb4da108053778de471541">
+    <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="BQG5926SFJ" TeamId="W8L47TG474" />
+  </MonoDevelop.Ide.ItemProperties.family.iOS>
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS - Maxima/Entitlements.plist">
+    <Files>
+      <File FileName="family/ViewModels/ViewModelListaUnidadeRastreada.cs" Line="314" Column="1" />
+      <File FileName="iOS/Info.plist" />
+      <File FileName="iOS/Entitlements.plist" />
+      <File FileName="family/Resx/AppResources.resx" Line="241" Column="19" />
+      <File FileName="iOS - Maxima/Info.plist" />
+      <File FileName="iOS - Maxima/Entitlements.plist" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="family" expanded="True">
+            <Node name="family" expanded="True">
+              <Node name="Resx" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
+            </Node>
+            <Node name="family.iOS" expanded="True" />
+            <Node name="family.iOS - Maxima" expanded="True">
+              <Node name="Entitlements.plist" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.family.iOS_220-_220Khronos automaticSigning="True" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.73f1fb7f6a18f97946eb4da108053778de471541">
+    <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="BQG5926SFJ" TeamId="N53DY72M5D" />
+  </MonoDevelop.Ide.ItemProperties.family.iOS_220-_220Khronos>
+  <MonoDevelop.Ide.ItemProperties.family.iOS-ALLTECH automaticSigning="True" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.E6E32988-264C-41A5-8783-8AA3D6017068">
+    <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="BQG5926SFJ" TeamId="6M67CD69WT" />
+  </MonoDevelop.Ide.ItemProperties.family.iOS-ALLTECH>
+  <MonoDevelop.Ide.ItemProperties.family.iOS_220-_220AGILITY PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.73f1fb7f6a18f97946eb4da108053778de471541" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>Droid - Khronos/family.Droid - Khronos.csproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.ItemProperties.family.iOS_220-_220Maxima automaticSigning="True" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.73f1fb7f6a18f97946eb4da108053778de471541">
+    <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="BQG5926SFJ" TeamId="GKD6ZNVSVJ" />
+  </MonoDevelop.Ide.ItemProperties.family.iOS_220-_220Maxima>
+  <MonoDevelop.Ide.ItemProperties.family.iOS_220-_220Spywave automaticSigning="True" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.E637BEFD-9BE4-4225-8F5C-754329989975">
+    <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="8XGP4ERF4X" TeamId="7Y3T27TKD2" />
+  </MonoDevelop.Ide.ItemProperties.family.iOS_220-_220Spywave>
+  <MonoDevelop.Ide.ItemProperties.family.Droid PreferredExecutionTarget="Android.0043371526" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|iPhone" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

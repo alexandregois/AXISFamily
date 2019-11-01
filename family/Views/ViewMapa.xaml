@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="family.Views.ViewMapa"
+	NavigationPage.HasNavigationBar="false"             
+	xmlns:mapsgoogle="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+	BackgroundColor="#FF363636">
+
+    <ContentView 
+		x:Name="PanelGeral" 
+		Margin="0"
+		HeightRequest="{Binding DefaultHeightContent}"
+		WidthRequest="{Binding DefaultWidth}">
+
+        <AbsoluteLayout 
+			x:Name="PanelViewMapa" 
+			Margin="0,0,0,0"
+			HeightRequest="{Binding DefaultHeightContent}"
+			WidthRequest="{Binding DefaultWidth}"
+			>
+
+            <Grid 
+				x:Name="Grid"
+				ColumnSpacing="0" 
+				RowSpacing="0"
+				VerticalOptions="FillAndExpand" 
+				Margin="0"
+				HeightRequest="{Binding DefaultHeightContent}"
+				WidthRequest="{Binding DefaultWidth}">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="{Binding PainelMapaHeight}"/>
+                    <RowDefinition Height="{Binding BarraInferiorHeight}"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout 
+					x:Name="PainelMapa" 
+					Grid.Row="0" 
+					Grid.Column="0"
+					Margin="0" 
+					Spacing="0"
+					HeightRequest="{Binding PainelMapaHeight}" 
+                    IsVisible="{Binding ExibeMapa}"
+				></StackLayout>
+
+                <StackLayout 
+					x:Name="PainelStreetView" 
+					Grid.Row="0" 
+					Grid.Column="0"
+					Margin="0" 
+					Spacing="0"
+					HeightRequest="{Binding PainelMapaHeight}"      
+                    IsVisible="{Binding ExibeStreet}"
+				>
+                    <WebView 
+					x:Name="WVStreet"
+					Source="{Binding WVStreetSource}" 
+					IsVisible="{Binding ExibeStreetView}"
+                    HeightRequest="{Binding HeightStreetView}"
+					WidthRequest="{Binding WidthStreetView}" 
+				>
+                    </WebView>
+                </StackLayout>
+
+                <AbsoluteLayout 
+					x:Name="BarraInferior" 
+					Grid.Row="1"
+					Grid.Column="0"
+					Margin="0"
+					WidthRequest="{Binding DefaultWidth}"
+					HeightRequest="{Binding BarraInferiorHeight}">
+
+                    <AbsoluteLayout 
+						x:Name="MenuBox" 
+						HeightRequest="{Binding MenuHeight}"
+						WidthRequest="{Binding DefaultWidth}"
+						Opacity="1">
+                        <ScrollView
+							x:Name="Menu" 
+							Orientation="Horizontal"
+							Margin="0"
+							Padding="0"
+							HeightRequest="{Binding MenuHeight}"
+							WidthRequest="{Binding DefaultWidth}"
+							Opacity="1"
+						>
+                            <StackLayout
+								Orientation="Horizontal"
+								Margin="0"
+								Padding="0"
+							>
+                                <Button
+                                    x:Name="ic_localizacao"
+                                    x:Uid="ic_localizacao"
+									HeightRequest="{Binding MenuHeight}"
+									WidthRequest="{Binding MenuItemWidth}"
+									Image="ic_localizacao.png"
+									BackgroundColor="{Binding UltimaPosicaoBackgroundColor}"
+									Opacity="{Binding UltimaPosicaoOpacity}"
+									IsEnabled="{Binding UltimaPosicaoEnabled}"
+									Command="{Binding BoxMenuUltimaPosicao}"
+									CommandParameter="1"
+									BorderRadius="0"
+									BorderWidth="0"
+									BorderColor="Transparent"
+								></Button>
+
+                                <Button
+                                    x:Name="ic_historico"
+                                    x:Uid="ic_historico"
+									HeightRequest="{Binding MenuHeight}"
+									WidthRequest="{Binding MenuItemWidth}"
+									Image="ic_historico.png"
+									BackgroundColor="{Binding HistoricoBackgroundColor}"
+									Opacity="{Binding HistoricoOpacity}"
+									IsEnabled="{Binding HistoricoEnabled}"
+									Command="{Binding BoxMenuHistorico}"
+									CommandParameter="2"
+									BorderRadius="0"
+									BorderWidth="0"
+									BorderColor="Transparent"
+								></Button>
+
+                                <Button
+                                    x:Name="ic_ponto_controle"
+                                    x:Uid="ic_ponto_controle"
+									HeightRequest="{Binding MenuHeight}"
+									WidthRequest="{Binding MenuItemWidth}"
+									Image="ic_ponto_controle.png"
+									BackgroundColor="{Binding PontoControleBackgroundColor}"
+									Opacity="{Binding PontoControleOpacity}"
+									IsEnabled="{Binding PontoControleEnabled}"
+									IsVisible="{Binding PontoControleVisible}"
+									Command="{Binding BoxMenuPontoControle}"
+									CommandParameter="3"
+									BorderRadius="0"
+									BorderWidth="0"
+									BorderColor="Transparent"
+								></Button>
+
+                                <Button
+                                    x:Name="ic_ancora"
+                                    x:Uid="ic_ancora"
+									HeightRequest="{Binding MenuHeight}"
+									WidthRequest="{Binding MenuItemWidth}"
+									Image="ic_ancora.png"
+									BackgroundColor="{Binding AncoraBackgroundColor}"
+									Opacity="{Binding AncoraOpacity}"
+									IsEnabled="{Binding AncoraEnabled}"
+									IsVisible="{Binding AncoraVisible}"
+									Command="{Binding BoxMenuAncora}"
+									CommandParameter="4"
+									BorderRadius="0"
+									BorderWidth="0"
+									BorderColor="Transparent"
+								></Button>
+                                <Button
+                                    x:Name="ic_manutencao"
+                                    x:Uid="ic_manutencao"
+									HeightRequest="{Binding MenuHeight}"
+									WidthRequest="{Binding MenuItemWidth}"
+									Image="ic_manutencao.png"
+									BackgroundColor="{Binding ManutencaoBackgroundColor}"
+									Opacity="{Binding ManutencaoOpacity}"
+									IsEnabled="{Binding ManutencaoEnabled}"
+									IsVisible="{Binding ManutencaoVisible}"
+									Command="{Binding BoxMenuManutencao}"
+									CommandParameter="6"
+									BorderRadius="0"
+									BorderWidth="0"
+									BorderColor="Transparent"
+								></Button>
+                                <Button
+                                    x:Name="ic_bloq"
+                                    x:Uid="ic_bloq"
+									HeightRequest="{Binding MenuHeight}"
+									WidthRequest="{Binding MenuItemWidth}"
+									Image="ic_bloq.png"
+									BackgroundColor="{Binding BloqueioBackgroundColor}"
+									Opacity="{Binding BloqueioOpacity}"
+									IsEnabled="{Binding BloqueioEnabled}"
+									IsVisible="{Binding BloqueioVisible}"
+									Command="{Binding BoxMenuBloqueio}"
+									CommandParameter="5"
+									BorderRadius="0"
+									BorderWidth="0"
+									BorderColor="Transparent"
+								></Button>
+
+                            </StackLayout>
+                        </ScrollView>
+                    </AbsoluteLayout>
+
+                    <AbsoluteLayout 
+						x:Name="ContentLoadBox"
+						HeightRequest="{Binding ContentLoadBoxHeight}"
+						WidthRequest="{Binding DefaultWidth}">
+
+                        <StackLayout 
+							x:Name="ContentLoad" 
+							Orientation="Horizontal"
+							Margin="0,0,0,0" 
+							Spacing="0" 
+							HorizontalOptions="CenterAndExpand"
+							WidthRequest="{Binding DefaultWidth}"
+						></StackLayout>
+
+                    </AbsoluteLayout>
+
+                </AbsoluteLayout>
+
+            </Grid>
+        </AbsoluteLayout>
+    </ContentView>
+</ContentPage>

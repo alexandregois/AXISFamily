@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="family.Views.ViewConfiguracao" NavigationPage.HasNavigationBar="false" BackgroundColor="#FF363636">
+    <ContentView x:Name="PanelGeral" Margin="0" HeightRequest="{Binding DefaultHeightContent}" WidthRequest="{Binding DefaultWidth}">
+        <AbsoluteLayout x:Name="Panel" Margin="0,0,0,0" HeightRequest="{Binding DefaultHeightContent}" WidthRequest="{Binding DefaultWidth}">
+            <Grid x:Name="Grid" ColumnSpacing="0" RowSpacing="0" VerticalOptions="FillAndExpand" Margin="0" HeightRequest="{Binding PanelHeight}" WidthRequest="{Binding DefaultWidth}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <StackLayout x:Name="PanelMinhaConta" Grid.Row="0" Grid.Column="0" Margin="0" Spacing="0" Orientation="Horizontal">
+                </StackLayout>
+                <StackLayout x:Name="PanelContratar" Grid.Row="0" Grid.Column="0" BackgroundColor="#FF0091B3" Margin="0" Spacing="0" Orientation="Horizontal">
+                    <StackLayout x:Name="ImageContratarBox" Margin="{Binding ImageBoxMargin}" Spacing="0">
+                        <StackLayout HeightRequest="{Binding ImageBoxHeight}" WidthRequest="{Binding ImageBoxWidth}" BackgroundColor="#863a7f" Margin="0" Spacing="0">
+                            <Image x:Name="ImageContratar" Source="ic_pessoa.png" WidthRequest="48" HeightRequest="48" VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+                            </Image>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout x:Name="ContentContratar" Spacing="0" Orientation="Vertical" Margin="{Binding ContentBoxMargin}" HeightRequest="{Binding ContentBoxHeight}">
+                        <Button x:Name="ContratarButton" TextColor="White" VerticalOptions="Center" HorizontalOptions="Start" BackgroundColor="#FF0091B3" Margin="13,11,0,0" FontSize="26" Text="{Binding ContratarButtonText}" Command="{Binding ContratarButtonCommand}" IsVisible="{Binding BtnContratarIsVisible}">
+                        </Button>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout x:Name="PanelDesconectar" Grid.Row="1" Grid.Column="0" BackgroundColor="#FF984493" Margin="0, -57, 0, 0" Spacing="0" Orientation="Horizontal" IsVisible="false" >
+                    <StackLayout x:Name="ImageDesconectarBox" Margin="{Binding ImageBoxMargin}" Spacing="0">
+                        <StackLayout HeightRequest="{Binding ImageBoxHeight}" WidthRequest="{Binding ImageBoxWidth}" BackgroundColor="#863a7f" Margin="0" Spacing="0">
+                            <Image x:Name="ImageDesconectar" Source="ic_pessoa.png" WidthRequest="48" HeightRequest="48" VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+                            </Image>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout x:Name="ContentDesconectar" Spacing="0" Orientation="Vertical" Margin="{Binding ContentBoxMargin}" HeightRequest="{Binding ContentBoxHeight}">
+                        <Label x:Name="Email" TextColor="White" LineBreakMode="TailTruncation" Text="{Binding Email}" Margin="13,7,0,0">
+                        </Label>
+                        <Button x:Name="DesconectarButton" TextColor="White" VerticalOptions="Center" HorizontalOptions="Start" BackgroundColor="#FF984493" Margin="13,5,0,0" FontSize="26" Text="{Binding DesconectarButtonText}" Command="{Binding DesconectarButtonCommand}">
+                        </Button>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+        </AbsoluteLayout>
+    </ContentView>
+</ContentPage>

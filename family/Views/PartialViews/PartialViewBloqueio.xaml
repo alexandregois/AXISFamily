@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="family.Views.PartialViews.PartialViewBloqueio">
+	<ContentView.Content>
+		
+		<ScrollView
+			x:Name="Panel" 
+			Margin="0"
+			HeightRequest="{Binding ContentLoadBoxHeight}"
+			WidthRequest="{Binding DefaultWidth}"
+			BackgroundColor="{Binding ScrollViewColor}">
+			
+			<StackLayout
+				Spacing="0"
+				Margin="0">
+
+				<StackLayout
+					Margin="0"
+					Spacing="0"
+					BackgroundColor="{Binding LabelButtonBackgroundColor}"
+					MinimumHeightRequest="53">
+					<Label 
+						x:Name="LabelPassWord"
+						Margin="0, 13"
+						Text="{Binding LabelPassWordText}"
+						FontSize="16"
+						TextColor="White" 
+						HorizontalTextAlignment="Center"
+						VerticalTextAlignment="Center"
+					></Label>
+				</StackLayout>
+
+				<StackLayout
+					VerticalOptions="CenterAndExpand" 
+					HorizontalOptions="FillAndExpand"
+					WidthRequest="{Binding DefaultWidth}"
+				>
+					<StackLayout
+						Margin="{Binding BoxTotalMargin}" 
+						Spacing="0"
+						VerticalOptions="CenterAndExpand"
+					>
+						
+						<Entry 
+							x:Name="TxtSenha" 
+							FontSize="20" 
+							IsPassword="True" 
+							HorizontalTextAlignment="Center"
+							PlaceholderColor="White"
+							TextColor="White"
+							BackgroundColor="Transparent"
+							Placeholder="{Binding TxtSenhaPlaceHolder}" 
+							IsEnabled="{Binding TxtSenhaIsEnabled}"
+							Text="{Binding TxtSenhaText}" 
+						></Entry>
+
+						<StackLayout
+							Margin="{Binding MarginSeparationDefault}"
+							Spacing="0"
+							HorizontalOptions="Start"
+							Orientation="Horizontal">
+							
+							<Label 
+						        x:Name="LabelIgnicao"
+						        Text="{Binding LabelIgnicaoText}"
+						        FontSize="15"
+						        TextColor="White" 
+						        Margin="{Binding LabelIgnicaoMargin}"
+								WidthRequest="{Binding LabelTwoColumnWidthRequest}"
+							></Label>
+
+							<Label 
+						        x:Name="LabelVelocidade"
+						        Text="{Binding LabelVelocidadeText}"
+						        FontSize="20" 
+						        TextColor="White" 
+						        Margin="{Binding LabelVelocidadeMargin}"
+								WidthRequest="{Binding LabelTwoColumnWidthRequest}"
+							></Label>
+							
+						</StackLayout>
+
+						<Label
+							x:Name="LabelStatus"
+						    Text="{Binding LabelStatusText}"		
+					        FontSize="16"
+					        TextColor="White" 
+							Margin="{Binding MarginSeparationDefault}"
+						></Label>
+
+					</StackLayout>
+				</StackLayout>
+
+				<Button
+					x:Name="AtivarBox"
+					Margin="0"
+					TextColor="White" 
+					BorderWidth="0"
+					BorderRadius="0"
+					BorderColor="Transparent"
+					HeightRequest="53"
+					FontSize="20"
+					IsEnabled="{Binding AtivarBoxIsEnabled}" 
+					Text="{Binding AtivarBoxText}" 
+					BackgroundColor="{Binding LabelButtonBackgroundColor}"
+					Command="{Binding AtivarBoxCommand}"
+				></Button>
+				
+			</StackLayout>
+			
+		</ScrollView>
+		
+	</ContentView.Content>
+</ContentView>

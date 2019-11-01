@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "283185196169",
+    "firebase_url": "https://ssx-2minutos.firebaseio.com",
+    "project_id": "ssx-2minutos",
+    "storage_bucket": "ssx-2minutos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:283185196169:android:4ff0bc94d0f3ae96",
+        "android_client_info": {
+          "package_name": "br.com.doisminutos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "283185196169-f67o2orr7tfs8lib8mij10kdv1geg8aq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1oojPuEfkl8U1LdjjiJH1RBowStvcAjo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:283185196169:android:a00c592877a33e2f",
+        "android_client_info": {
+          "package_name": "br.com.doisminutos.family"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "283185196169-f67o2orr7tfs8lib8mij10kdv1geg8aq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1oojPuEfkl8U1LdjjiJH1RBowStvcAjo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="br.com.khronosnet.family" android:versionName="1.0.8" android:installLocation="auto" android:versionCode="14">
+	<uses-sdk android:targetSdkVersion="26" android:minSdkVersion="17" />
+	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.CALL_PHONE" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<permission android:name="br.com.khronosnet.family.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+	<uses-permission android:name="br.com.khronosnet.family.permission.C2D_MESSAGE" />
+	<!--Location-->
+	<uses-permission android:name="android.permission.LOCATION_HARDWARE" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-feature android:name="android.hardware.location.gps" />
+	<application android:label="Khronos Family" android:allowBackup="true" android:icon="@drawable/ic_launcher" android:largeHeap="true">
+		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyBw3Voldg8_kywqtlXmqoqxF_3VbUXi2ws" />
+		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+		<meta-data android:name="com.onesignal.NotificationAccentColor.DEFAULT" android:value="FF2E2544" />
+		<service android:name="br.com.PosicaoService" android:enabled="true" android:exported="true"></service>
+		<service android:name="br.com.GetBestPosition" android:enabled="true" android:exported="true"></service>
+		<service android:name="br.com.PanicoService" android:enabled="true" android:exported="true"></service>
+		<service android:name="br.com.PosicaoSenderService" android:enabled="true" android:exported="true"></service>
+		<receiver android:name="br.com.BootReceiver" android:enabled="true" android:exported="true">
+			<intent-filter>
+				<category android:name="android.intent.category.DEFAULT" />
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+				<action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+				<action android:name="android.intent.action.QUICKBOOT_POWERON" />
+				<action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+			</intent-filter>
+		</receiver>
+		<receiver android:name="com.onesignal.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+			<intent-filter>
+				<action android:name="com.google.android.c2dm.intent.RECEIVE" />
+				<category android:name="br.com.khronosnet.family" />
+			</intent-filter>
+		</receiver>
+		<receiver android:name="br.com.ConnectivityChangeService" android:enabled="true" android:exported="true">
+			<intent-filter>
+				<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+			</intent-filter>
+		</receiver>
+	</application>
+</manifest>

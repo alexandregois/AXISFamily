@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="family.Views.ViewCadastro"
+	xmlns:behaviors="clr-namespace:family.CustomElements.Behaviors;assembly=family"
+	Title="Cadastro"
+	NavigationPage.HasNavigationBar="false"
+	BackgroundColor="#FF211C32">
+	<AbsoluteLayout 
+		BackgroundColor="#FF211C32"
+		x:Name="Panel" 
+		Margin="{Binding ScrollViewMargin}"
+		HeightRequest="{Binding PanelHeight}"
+		WidthRequest="{Binding DefaultWidth}"
+	>
+		<ScrollView 
+			x:Name="scrollView"
+			HeightRequest="{Binding PanelHeight}"
+			WidthRequest="{Binding DefaultWidth}"
+		>
+
+			<Grid 
+				x:Name="Grid" 
+				ColumnSpacing="0" 
+				RowSpacing="0"
+				Margin="0"
+				WidthRequest="{Binding DefaultWidth}">
+				
+				<Grid.ColumnDefinitions>
+	                <ColumnDefinition Width="{Binding DefaultWidth}"></ColumnDefinition>
+	            </Grid.ColumnDefinitions>
+
+				<Grid.RowDefinitions>
+	                <RowDefinition Height="{Binding PanelLogoHeight}"/>
+	                <RowDefinition Height="*"/>
+	            </Grid.RowDefinitions>
+
+				<StackLayout 
+					x:Name="PanelLogo" 
+					Grid.Row="0" 
+					Grid.Column="0" 
+					VerticalOptions="FillAndExpand" 
+					HorizontalOptions="Center">
+	                <Image 
+						x:Name="logo" 
+						Source="{Binding LogoSource}"
+						HeightRequest="{Binding LogoHeight}"
+						WidthRequest="{Binding LogoWidth}" 
+						HorizontalOptions="Center"
+						VerticalOptions="CenterAndExpand"/>
+	            </StackLayout>
+
+				<StackLayout 
+					x:Name="PanelFormulario" 
+					Grid.Row="1" 
+					Grid.Column="0" 
+					Orientation="Vertical" 
+					Margin="0, 0, 0, 30" 
+					Spacing="10"
+					HorizontalOptions="Center"
+					VerticalOptions="StartAndExpand">
+
+					<Entry 
+						x:Name="TxtNome" 
+						Margin="0"
+                        Text="{Binding TxtNome}"
+						WidthRequest="{Binding EntryWidth}"
+						Placeholder="Nome" 
+						BackgroundColor="White"
+						HeightRequest="{Binding EntryHeight}">
+							<Entry.Behaviors>
+							   <behaviors:EntryLengthValidatorBehavior MaxLength="150" />
+							</Entry.Behaviors>
+						</Entry>
+
+                    <Entry 
+						x:Name="TxtCep" 
+                        Text="{Binding TxtCep}"
+						Margin="0"
+						WidthRequest="{Binding EntryWidth}"
+						Placeholder="CEP"
+						Keyboard="Numeric"
+						BackgroundColor="White" 
+						HeightRequest="{Binding EntryHeight}">
+						<Entry.Behaviors>
+						   <behaviors:EntryLengthValidatorBehavior MaxLength="8" />
+						</Entry.Behaviors>
+					</Entry>
+
+                    <Entry 
+						x:Name="TxtTelefone" 
+                        Text="{Binding TxtTelefone}"
+						Margin="0"
+						WidthRequest="{Binding EntryWidth}"
+						Placeholder="21999999999"
+						Keyboard="Telephone" 
+						BackgroundColor="White" 
+						HeightRequest="{Binding EntryHeight}">
+						<Entry.Behaviors>
+						   <behaviors:EntryLengthValidatorBehavior MaxLength="11" />
+						</Entry.Behaviors>
+					</Entry>
+
+                    <Entry 
+						x:Name="TxtEmail" 
+                        Text="{Binding TxtEmail}"
+						Margin="0"
+						WidthRequest="{Binding EntryWidth}"
+						Placeholder="E-mail"
+						Keyboard="Email" 
+						BackgroundColor="White" 
+						HeightRequest="{Binding EntryHeight}">
+						<Entry.Behaviors>
+						   <behaviors:EntryLengthValidatorBehavior MaxLength="150" />
+						</Entry.Behaviors>
+					</Entry>
+
+                    <Entry 
+						x:Name="TxtSenha" 
+                        Text="{Binding TxtSenha}"
+						Margin="0"
+						WidthRequest="{Binding EntryWidth}"
+						Placeholder="Senha"
+						IsPassword="True" 
+						BackgroundColor="White" 
+						HeightRequest="{Binding EntryHeight}">
+						<Entry.Behaviors>
+						   <behaviors:EntryLengthValidatorBehavior MaxLength="100" />
+						</Entry.Behaviors>
+					</Entry>
+
+                    <StackLayout 
+						Margin="0"
+						WidthRequest="{Binding EntryWidth}"
+						Spacing="0" 
+						HorizontalOptions="Center"
+						VerticalOptions="Center" 
+						Orientation="Horizontal"
+						HeightRequest="{Binding EntryHeight}">
+                        <StackLayout 
+							Margin="0" 
+							Spacing="0">
+                            <Entry 
+								x:Name="TxtConfirmarSenha" 
+                                Text="{Binding TxtConfirmarSenha}"
+								Placeholder="Confirmar Senha"
+								TextColor="Black" 
+								HeightRequest="{Binding EntryHeight}"
+								WidthRequest="{Binding TxtSenhaWidth}"
+								IsPassword="True" 
+								BackgroundColor="White">
+								<Entry.Behaviors>
+								   <behaviors:EntryLengthValidatorBehavior MaxLength="100" />
+								</Entry.Behaviors>
+							</Entry>
+                        </StackLayout>
+						
+						<Button 
+							x:Name="ImageSetaLogin" 
+							Margin="0" 
+							Image="{Binding ButtonCadastrarSource}"
+							BorderRadius="0" 
+							BackgroundColor="#FF974392" 
+							HeightRequest="{Binding EntryHeight}"
+							WidthRequest="{Binding ButtonCadastrarWidth}"
+							Command="{Binding ButtonCadastrarCommand}">
+	                    </Button>
+						
+                    </StackLayout>
+					
+				</StackLayout>
+				
+			</Grid>
+		</ScrollView>
+	</AbsoluteLayout>
+			
+</ContentPage>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	NavigationPage.HasNavigationBar="false"
+	x:Class="family.Views.ViewListaUnidadeRastreada"
+	Title="Lista Unidade RastreadaPage"
+	BackgroundColor="#FF363636">
+
+    <ContentView 
+		x:Name="PanelGeral" 
+		Margin="0"
+		HeightRequest="{Binding DefaultHeightContent}"
+		WidthRequest="{Binding DefaultWidth}">
+        <AbsoluteLayout 
+			x:Name="Panel" 
+			Margin="0,0,0,0"
+			HeightRequest="{Binding DefaultHeightContent}"
+			WidthRequest="{Binding DefaultWidth}"
+			>
+
+            <Grid 
+				x:Name="Grid"
+				ColumnSpacing="0" 
+				RowSpacing="0"
+				VerticalOptions="FillAndExpand" 
+				Margin="0"
+				HeightRequest="{Binding DefaultHeightContent}"
+				WidthRequest="{Binding DefaultWidth}">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <!--<ScrollView x:Name="ScrollViewUnidades" VerticalOptions="FillAndExpand" IsEnabled="True" >-->
+                    <ListView
+					x:Name="PanelLista"
+					AutomationId="PanelLista"
+					Grid.Row="0" 
+					Grid.Column="0"
+					Margin="0,0,0,0"
+					HorizontalOptions="StartAndExpand"
+					BackgroundColor="#FF232323"
+					SeparatorVisibility="None"
+					RefreshCommand="{Binding PanelLista_RefreshCommand}"
+					RowHeight="{Binding PanelLista_RowHeight}"
+					IsRefreshing="{Binding PanelLista_IsRefreshing}"
+					ItemsSource="{Binding PanelLista_ItemsSource}"
+					IsEnabled="{Binding PanelLista_Enabled}"
+                    SeparatorColor="LightGray">
+                    </ListView>
+                <!--</ScrollView>-->
+
+                <StackLayout 
+					x:Name="PanelMenu" 
+					Grid.Row="1" 
+					Grid.Column="0" 
+					Orientation="Vertical" 
+					Margin="0" 
+					Spacing="0"
+				>
+                    <Button
+						x:Name="btnPanico"
+						BackgroundColor = "#E25010"
+				        Image = "ic_panico.png"
+				        Margin = "0"
+				        BorderRadius = "0"
+				        BorderWidth = "0"
+				        BorderColor = "Transparent"
+						Command = "{Binding BtnPanicoCommand}"
+						IsEnabled = "{Binding BtnEnabled}"
+						IsVisible = "{Binding BtnPanicoIsVisible}"
+					    HeightRequest = "{Binding DefaultButtonHeight}"
+						WidthRequest = "{Binding DefaultWidth}"
+					></Button>
+
+                    <StackLayout
+						Orientation = "Horizontal"
+					    HeightRequest = "{Binding DefaultButtonHeight}"
+						WidthRequest = "{Binding DefaultWidth}"
+					    Margin = "0"
+					    Spacing = "0"
+					>
+                        <Button
+							x:Name="btnAddDispositivo"
+							BackgroundColor = "#90AD2A"
+					        Image = "ic_add_dispositivo.png"
+					        Margin = "0"
+					        BorderRadius = "0"
+					        BorderWidth = "0"
+					        BorderColor = "Transparent"
+							Command = "{Binding BtnDeviceCommand}"
+							IsEnabled = "{Binding BtnEnabled}"
+							IsVisible = "{Binding BtnAddDispositivoIsVisible}"
+							WidthRequest = "{Binding BtnsWidthRequestFooter}"
+					    	HeightRequest = "{Binding DefaultButtonHeight}"
+						></Button>
+
+                        <Button
+							x:Name="btnConvite"
+							BackgroundColor = "#8F53BA"
+					        Image = "ic_add_pessoa.png"
+					        Margin = "0"
+					        BorderRadius = "0"
+					        BorderWidth = "0"
+					        BorderColor = "Transparent"
+							Command = "{Binding BtnConviteCommand}"
+							IsEnabled = "{Binding BtnEnabled}"
+							IsVisible = "{Binding BtnPodeConvidarIsVisible}"
+							WidthRequest = "{Binding BtnsWidthRequest}"
+					    	HeightRequest = "{Binding DefaultButtonHeight}"
+						></Button>
+
+                        <Button
+							x:Name="btnTelefones"
+							BackgroundColor = "#a3455d"
+					        Image = "ic_telefone_on.png"
+					        Margin = "0"
+					        BorderRadius = "0"
+					        BorderWidth = "0"
+					        BorderColor = "Transparent"
+                            IsEnabled = "{Binding BtnEnabled}"
+                            IsVisible = "{Binding BtnTelefoneIsVisible}"
+							WidthRequest = "{Binding BtnsWidthRequestFooter}"
+					    	HeightRequest = "{Binding DefaultButtonHeight}"
+                            Command = "{Binding BtnTelefoneCommand}"
+						></Button>
+
+                        <Button
+							x:Name="btnConfiguracao"
+							BackgroundColor = "#F09356"
+					        Image = "ic_configuracoes.png"
+					        Margin = "0"
+					        BorderRadius = "0"
+					        BorderWidth = "0"
+					        BorderColor = "Transparent"
+							Command = "{Binding BtnConfiguracaoCommand}"
+							IsEnabled = "{Binding BtnEnabled}"
+							WidthRequest = "{Binding BtnsWidthRequestFooter}"
+					    	HeightRequest = "{Binding DefaultButtonHeight}"
+						></Button>
+
+                    </StackLayout>
+
+                </StackLayout>
+
+            </Grid>
+        </AbsoluteLayout>
+    </ContentView>
+</ContentPage>

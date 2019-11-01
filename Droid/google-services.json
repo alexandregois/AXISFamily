@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "310951902575",
+    "firebase_url": "https://ssx-family-f47b6.firebaseio.com",
+    "project_id": "ssx-family-f47b6",
+    "storage_bucket": "ssx-family-f47b6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310951902575:android:b87aa171171b11be",
+        "android_client_info": {
+          "package_name": "br.com.systemsat.family"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "310951902575-pft833vfkngt60bhfbajs7g1jgpqmtf1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAy6XQL5KUmjFDggBWa46AZjHaLdAEgo8s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "310951902575-pft833vfkngt60bhfbajs7g1jgpqmtf1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "310951902575-purh6h75lsthbh8bpmmdcmmn0777grah.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.systemsat.family"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

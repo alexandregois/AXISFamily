@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="family.Views.PartialViews.PartialViewUltimaPosicao">
+	<ContentView.Content>
+		
+		<ScrollView
+			x:Name="Panel" 
+			Margin="0"
+			HeightRequest="{Binding ContentLoadBoxHeight}"
+			WidthRequest="{Binding DefaultWidth}"
+			BackgroundColor="#FFB1C46E">
+			
+			<StackLayout
+				Spacing="0"
+				Margin="0">
+				
+				<StackLayout 
+					x:Name="PanelLabel"
+					BackgroundColor="#90AD2A"
+					Spacing="0"
+					Margin="0"
+					HeightRequest="55"
+				></StackLayout>
+
+				<StackLayout 
+					x:Name="PanelDadosPosicao" 
+					BackgroundColor="#FFB1C46E" 
+					Margin="0" 
+					Spacing="0">
+
+					<StackLayout
+						Orientation="Horizontal"
+						HorizontalOptions="Center"
+						Margin="0" 
+						Spacing="0">
+
+						<StackLayout 
+							x:Name="panelVelocidade" 
+							Orientation="Vertical"
+							Margin="0,7,0,0" 
+							Spacing="0">
+							
+		                        <Label 
+									x:Name="LblVelocidade" 
+									TextColor="White" 
+									FontSize="60"
+									Text="{Binding LabelVelocidadeText}"
+								/>
+		                        <Label 
+									Text="Km/h" 
+									TextColor="White" 
+									Margin="7,0,0,0" />
+							
+		                </StackLayout>
+
+						<StackLayout 
+							x:Name="PanelAttr" 
+							Orientation="Vertical" 
+							Margin="50,32,0,0" 
+							Spacing="0" >
+
+		                    <StackLayout 
+								x:Name="IgnicaoBox" 
+								Orientation="Horizontal"
+								Spacing="0" 
+								Margin="0,0,0,0"
+								HeightRequest="30" 
+								IsVisible="{Binding IgnicaoBoxVisible}">
+								
+		                        <Image 
+									Source="ic_keys.png" 
+									HeightRequest="30"
+									WidthRequest="30" 
+									Margin="0,0,9,0"/>
+								
+		                        <Label 
+									x:Name="LblIgnicao" 
+									TextColor="White" 
+									FontSize="14" 
+									Margin="0,0,0,0"
+									Text="{Binding LabelIgnicaoText}"
+									VerticalOptions="CenterAndExpand" />
+								
+		                    </StackLayout>
+
+		                    <StackLayout 
+								x:Name="GpsBox" 
+								Orientation="Horizontal" 
+								Spacing="0" 
+								Margin="0"
+								HeightRequest="30" 
+								IsVisible="{Binding GpsBoxVisible}">
+
+		                        <Image 
+									Source="ic_gps_direction.png" 
+									HeightRequest="30" 
+									WidthRequest="30" 
+									Margin="0,0,9,0" />
+								
+		                        <Label 
+									x:Name="LblGps" 
+									TextColor="White" 
+									FontSize="14" 
+									Margin="0"
+									Text="{Binding LabelGpsText}"
+									VerticalOptions="CenterAndExpand" />
+								
+		                    </StackLayout>
+
+		                    <StackLayout 
+								x:Name="SinalBox" 
+								Orientation="Horizontal" 
+								Spacing="0" 
+								Margin="0"
+								HeightRequest="30"
+								IsVisible="{Binding SinalBoxVisible}">
+								
+		                        <Image 
+									Source="ic_gps_sinal.png" 
+									HeightRequest="30" 
+									WidthRequest="30" 
+									Margin="0,0,9,0"/>
+								
+		                       	<Label 
+									x:Name="LblSinal" 
+									TextColor="White" 
+									FontSize="14" 
+									Margin="0" 
+									Text="{Binding LabelSinalText}"
+									VerticalOptions="CenterAndExpand" />
+								
+		                    </StackLayout>
+
+		                    <StackLayout 
+								x:Name="BateriaBox" 
+								Orientation="Horizontal" 
+								Spacing="0"
+								Margin="0"
+								HeightRequest="30"
+								IsVisible="{Binding BateriaBoxVisible}">
+								
+		                        <Image 
+									Source="ic_gps_batery.png" 
+									HeightRequest="30" 
+									WidthRequest="30" 
+									Margin="0,0,9,0"/>
+								
+		                        <Label 
+									x:Name="LblBateriaIgnicao" 
+									TextColor="White" 
+									FontSize="14" 
+									Margin="0" 
+									Text="{Binding LabelBateriaIgnicaoText}"
+									VerticalOptions="CenterAndExpand" />
+								
+		                    </StackLayout>
+
+		                </StackLayout>
+						
+					</StackLayout>
+					
+				</StackLayout>
+				
+			</StackLayout>
+			
+		</ScrollView>
+		
+	</ContentView.Content>
+</ContentView>

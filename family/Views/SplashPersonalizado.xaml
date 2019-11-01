@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="family.Views.SplashPersonalizado"
+             BackgroundColor="{Binding CorFundoLogin}">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Grid VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <!--<RowDefinition Height="{Binding GridRowTop}"/>-->
+                    <RowDefinition Height="{Binding GridRowCenter}" />
+                    <RowDefinition Height="{Binding GridRowBotton}" />
+                    <!--<RowDefinition Height="Auto"/>-->
+                    <!--<RowDefinition Height="*" />-->
+                    <!--<RowDefinition Height="150" />-->
+                </Grid.RowDefinitions>
+                <!--<StackLayout Grid.Row="0"></StackLayout>-->
+                <StackLayout Grid.Row="0" VerticalOptions="Center" >
+                    <Image x:Name="imageLogo"></Image>
+                </StackLayout>
+                <StackLayout Grid.Row="1" VerticalOptions="End" >
+                    <Image 
+						x:Name="LogoSsat" 
+						Source="{Binding PowerBySource}"></Image>						
+                </StackLayout>
+            </Grid>            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

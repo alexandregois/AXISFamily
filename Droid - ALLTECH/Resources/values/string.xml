@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+  <string name="com.crashlytics.android.build_id">853b46f4-c6ba-4ff1-a70f-9aee0a6f6c11</string>
+  <string name="channel_name">SSX Family</string>
+  <!--<string name="com.crashlytics.android.build_id">1.4</string>-->
+</resources>

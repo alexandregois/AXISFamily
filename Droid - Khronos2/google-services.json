@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "107839767590",
+    "firebase_url": "https://ssx-khronos.firebaseio.com",
+    "project_id": "ssx-khronos",
+    "storage_bucket": "ssx-khronos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:107839767590:android:94ef62e49beea728",
+        "android_client_info": {
+          "package_name": "br.com.khronosnet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "107839767590-evqo4m4cebu8slriqo8a6q8pnrqsg7ul.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.khronosnet",
+            "certificate_hash": "ca504929b5aa1ff10d1f531a393417afcf6b2307"
+          }
+        },
+        {
+          "client_id": "107839767590-0gkk1mlrf9nvius1k42rm3k58jdncrmv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBe9HqI9F2Ehbt0sCNBEYDe-nl2X-C0WMs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "107839767590-0gkk1mlrf9nvius1k42rm3k58jdncrmv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "107839767590-kjvlaial1hd4878bghm71eiaui5t34t3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.khronosnet.family"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:107839767590:android:14949d52dcb9069d",
+        "android_client_info": {
+          "package_name": "br.com.khronosnet.family"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "107839767590-0gkk1mlrf9nvius1k42rm3k58jdncrmv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBe9HqI9F2Ehbt0sCNBEYDe-nl2X-C0WMs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "107839767590-0gkk1mlrf9nvius1k42rm3k58jdncrmv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "107839767590-kjvlaial1hd4878bghm71eiaui5t34t3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.khronosnet.family"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

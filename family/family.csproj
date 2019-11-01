@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5DE2BA9C-C439-4D75-B8DF-33359DCF73CF}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <UseMSBuildEngine>true</UseMSBuildEngine>
+    <OutputType>Library</OutputType>
+    <RootNamespace>family</RootNamespace>
+    <AssemblyName>family</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile>Profile7</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App.xaml" />
+    <EmbeddedResource Include="Views\ViewLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewListaUnidadeRastreada.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewCadastro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resx\AppResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resx\AppResources.pt.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.pt.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewConfiguracao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PartialViews\PartialViewUltimaPosicao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PartialViews\PartialViewAncora.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PartialViews\PartialViewHistorico.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PartialViews\PartialViewBloqueio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PartialViews\PartialViewPontoControle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewMapa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewStreet.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+      <IncludeInPackage>false</IncludeInPackage>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CrossPlataform\IMessage.cs" />
+    <Compile Include="CrossPlataform\INetworkConnection.cs" />
+    <Compile Include="CrossPlataform\LongPressedEffect.cs" />
+    <Compile Include="Domain\Dto\ManutencaoBasicaDto.cs" />
+    <Compile Include="Domain\Dto\MensagemSistemaDto.cs" />
+    <Compile Include="Domain\Dto\ParametroKeepAlive.cs" />
+    <Compile Include="Domain\Dto\PosicaoViolacaoRegraDto.cs" />
+    <Compile Include="Domain\Dto\RetornoSolicitacaoRastreamentoDto.cs" />
+    <Compile Include="Domain\Dto\TelefoneContatoDto.cs" />
+    <Compile Include="Domain\Enum\EnumStatusBateria.cs" />
+    <Compile Include="Domain\Enum\EnumKeepAlive.cs" />
+    <Compile Include="Model\ModelManutencao.cs" />
+    <Compile Include="Model\ModelKeepAlive.cs" />
+    <Compile Include="Model\ModelTelefone.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CrossPlataform\ICrossPlataformUtil.cs" />
+    <Compile Include="CrossPlataform\ILocalize.cs" />
+    <Compile Include="CustomElements\Behaviors\EntryLengthValidatorBehavior.cs" />
+    <Compile Include="CustomElements\CustomDialogAlert.cs" />
+    <Compile Include="Domain\PontoControle.cs" />
+    <Compile Include="Domain\RequestResult.cs" />
+    <Compile Include="Domain\Token.cs" />
+    <Compile Include="Domain\Usuario.cs" />
+    <Compile Include="Domain\Dto\AplicativoDto.cs" />
+    <Compile Include="Domain\Dto\ComandoLogDto.cs" />
+    <Compile Include="Domain\Dto\LatLong.cs" />
+    <Compile Include="Domain\Dto\MenuMapa.cs" />
+    <Compile Include="Domain\Dto\PosicaoEnvio.cs" />
+    <Compile Include="Domain\Dto\PosicaoHistorico.cs" />
+    <Compile Include="Domain\Dto\PosicaoUnidadeRastreada.cs" />
+    <Compile Include="Domain\Dto\ServiceResult.cs" />
+    <Compile Include="Domain\Dto\StatusComandoDto.cs" />
+    <Compile Include="Domain\Dto\TokenDto.cs" />
+    <Compile Include="Domain\Enum\EnumPage.cs" />
+    <Compile Include="Domain\Enum\EnumPosicaoEvento.cs" />
+    <Compile Include="Domain\Enum\EnumSistemaOperacional.cs" />
+    <Compile Include="Domain\Enum\EnumTipoUnidadeRastreada.cs" />
+    <Compile Include="Domain\Realm\PosicaoUnidadeRastreadaRealm.cs" />
+    <Compile Include="Domain\Realm\TokenRealm.cs" />
+    <Compile Include="Model\ModelBase.cs" />
+    <Compile Include="Model\ModelEmail.cs" />
+    <Compile Include="Model\ModelPushNotification.cs" />
+    <Compile Include="Model\ModelUsuario.cs" />
+    <Compile Include="Model\ModelRealm\RealmConfig.cs" />
+    <Compile Include="Services\CloudDataStore.cs" />
+    <Compile Include="Services\Interfaces\IDataStore.cs" />
+    <Compile Include="Services\Interfaces\IServices.cs" />
+    <Compile Include="Services\MockDataStore.cs" />
+    <Compile Include="Services\ServiceRealm\Base\RealmBase.cs" />
+    <Compile Include="Services\ServiceRealm\PosicaoDataStore.cs" />
+    <Compile Include="Services\ServiceRealm\TokenDataStore.cs" />
+    <Compile Include="ViewModels\Base\ViewModelBase.cs" />
+    <Compile Include="ViewModels\InterfaceServices\IMessageService.cs" />
+    <Compile Include="ViewModels\InterfaceServices\INavigationService.cs" />
+    <Compile Include="ViewModels\ViewModelCadastro.cs" />
+    <Compile Include="ViewModels\ViewModelAlertas.cs" />
+    <Compile Include="ViewModels\ViewModelListaTelefone.cs" />
+    <Compile Include="ViewModels\ViewModelLogin.cs" />
+    <Compile Include="ViewModels\ViewModelMapaGoogle.cs" />
+    <Compile Include="ViewModels\ViewModelManutencao.cs" />
+    <Compile Include="ViewModels\ViewModelSplash.cs" />
+    <Compile Include="ViewModels\ViewModelStreetView.cs" />
+    <Compile Include="Views\Interfaces\ILoader.cs" />
+    <Compile Include="Views\Interfaces\IStreetView.cs" />
+    <Compile Include="Views\PartialViews\PartialViewAlertas.xaml.cs">
+      <DependentUpon>PartialViewAlertas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PartialViews\PartialViewManutencaoEdicao.xaml.cs">
+      <DependentUpon>PartialViewManutencaoEdicao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PartialViews\PartialViewManutencao.xaml.cs">
+      <DependentUpon>PartialViewManutencao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Services\MessageService.cs" />
+    <Compile Include="Views\Services\NavigationService.cs" />
+    <Compile Include="Configuracao.cs" />
+    <Compile Include="Views\SplashPersonalizado.xaml.cs">
+      <DependentUpon>SplashPersonalizado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Template\ListAlertas_ViewCell.cs" />
+    <Compile Include="Views\Template\PanelListaTelefone_ViewCell.cs" />
+    <Compile Include="Views\ViewHistoricoDetalhes.xaml.cs">
+      <DependentUpon>ViewHistoricoDetalhes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewListaTelefone.xaml.cs">
+      <DependentUpon>ViewListaTelefone.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewLogin.xaml.cs">
+      <DependentUpon>ViewLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewListaUnidadeRastreada.xaml.cs">
+      <DependentUpon>ViewListaUnidadeRastreada.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewCadastro.xaml.cs">
+      <DependentUpon>ViewCadastro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resx\AppResources.Designer.cs">
+      <DependentUpon>AppResources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resx\AppResources.pt.Designer.cs">
+      <DependentUpon>AppResources.pt.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\Template\DefaultTemplate.cs" />
+    <Compile Include="ViewModels\ViewModelListaUnidadeRastreada.cs" />
+    <Compile Include="Views\Interfaces\IListaUnidadeRastreada.cs" />
+    <Compile Include="Views\Services\PermissaoService.cs" />
+    <Compile Include="Views\Template\PanelLista_ViewCell.cs" />
+    <Compile Include="Views\Template\ViewCellBase.cs" />
+    <Compile Include="Model\ModelUnidadeRastreada.cs" />
+    <Compile Include="Views\ViewConfiguracao.xaml.cs">
+      <DependentUpon>ViewConfiguracao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\ViewModelConfiguracao.cs" />
+    <Compile Include="Views\Interfaces\IMapa.cs" />
+    <Compile Include="ViewModels\ViewModelMapa.cs" />
+    <Compile Include="Views\Interfaces\IPartialView.cs" />
+    <Compile Include="Views\PartialViews\PartialViewUltimaPosicao.xaml.cs">
+      <DependentUpon>PartialViewUltimaPosicao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomElements\CustomLabel.cs" />
+    <Compile Include="ViewModels\ViewModelUltimaPosicao.cs" />
+    <Compile Include="Model\ModelPosicao.cs" />
+    <Compile Include="Views\PartialViews\PartialViewAncora.xaml.cs">
+      <DependentUpon>PartialViewAncora.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\ViewModelAncora.cs" />
+    <Compile Include="CustomElements\CustomSlider.cs" />
+    <Compile Include="Model\ModelAncora.cs" />
+    <Compile Include="Views\PartialViews\PartialViewHistorico.xaml.cs">
+      <DependentUpon>PartialViewHistorico.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\ViewModelHistorico.cs" />
+    <Compile Include="CustomElements\CustomDatePicker.cs" />
+    <Compile Include="Views\Interfaces\IPartialViewHistorico.cs" />
+    <Compile Include="Views\PartialViews\PartialViewBloqueio.xaml.cs">
+      <DependentUpon>PartialViewBloqueio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\ViewModelBloqueio.cs" />
+    <Compile Include="Model\ModelComando.cs" />
+    <Compile Include="Domain\Dto\ParametroDto.cs" />
+    <Compile Include="Domain\Enum\EnumTipoParametro.cs" />
+    <Compile Include="Views\PartialViews\PartialViewPontoControle.xaml.cs">
+      <DependentUpon>PartialViewPontoControle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\ViewModelPontoControle.cs" />
+    <Compile Include="Views\Interfaces\IPartialViewPontoControle.cs" />
+    <Compile Include="Model\ModelPontoControle.cs" />
+    <Compile Include="Views\Template\ListPontosControle_ViewCell.cs" />
+    <Compile Include="Services\ServiceRealm\SubmitProtocoloDataStore.cs" />
+    <Compile Include="Domain\Realm\SubmitProtocoloRealm.cs" />
+    <Compile Include="Domain\Protocolo\AxisOnboardHeader.cs" />
+    <Compile Include="Model\ModelReverseBitConverter.cs" />
+    <Compile Include="Domain\Protocolo\AxisOnboardPosition.cs" />
+    <Compile Include="Domain\Protocolo\AxisOnboardData.cs" />
+    <Compile Include="Domain\Protocolo\LBSInfo.cs" />
+    <Compile Include="CustomElements\CustomButton.cs" />
+    <Compile Include="Views\Template\ListHistorico_ViewCell.cs" />
+    <Compile Include="Domain\Dto\AncoraAtivacaoDto.cs" />
+    <Compile Include="Views\ViewMapa.xaml.cs">
+      <DependentUpon>ViewMapa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewStreet.xaml.cs">
+      <DependentUpon>ViewStreet.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="FodyWeavers.xml" />
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ViewHistoricoDetalhes.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\PartialViews\PartialViewManutencao.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\PartialViews\PartialViewManutencaoEdicao.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\SplashPersonalizado.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ViewListaTelefone.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\PartialViews\PartialViewAlertas.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>    
+  </Target>
+</Project>
